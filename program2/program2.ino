@@ -16,16 +16,16 @@ void setup() {
   }
 
   // Display sensor details
-  // sensor_t sensor;
-  // tsl.getSensor(&sensor);
-  // Serial.println("------------------------------------");
-  // Serial.print  ("Sensor:       "); Serial.println(sensor.name);
-  // Serial.print  ("Driver Ver:   "); Serial.println(sensor.version);
-  // Serial.print  ("Unique ID:    "); Serial.println(sensor.sensor_id);
-  // Serial.print  ("Max Value:    "); Serial.print(sensor.max_value); Serial.println(" lux");
-  // Serial.print  ("Min Value:    "); Serial.print(sensor.min_value); Serial.println(" lux");
-  // Serial.print  ("Resolution:   "); Serial.print(sensor.resolution); Serial.println(" lux");
-  // Serial.println("------------------------------------");
+  sensor_t sensor;
+  tsl.getSensor(&sensor);
+  Serial.println("------------------------------------");
+  Serial.print  ("Sensor:       "); Serial.println(sensor.name);
+  Serial.print  ("Driver Ver:   "); Serial.println(sensor.version);
+  Serial.print  ("Unique ID:    "); Serial.println(sensor.sensor_id);
+  Serial.print  ("Max Value:    "); Serial.print(sensor.max_value); Serial.println(" lux");
+  Serial.print  ("Min Value:    "); Serial.print(sensor.min_value); Serial.println(" lux");
+  Serial.print  ("Resolution:   "); Serial.print(sensor.resolution); Serial.println(" lux");
+  Serial.println("------------------------------------");
 
   // Set gain and integration time
 tsl.setGain(TSL2561_GAIN_1X);  // Use 1X gain (normal)
